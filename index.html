@@ -40,22 +40,14 @@ var system = [TYROUI_SIMULATOR, CUSTOMUI_SIMULATOR];
 var apiKey = "Test API Key";  // API Key isn't validated in either test environment
 var posProductInfo = {posProductVendor: "Tyro Payments", posProductName: "Mini Cloud POS", posProductVersion: "1.0.0"};
 var simulator = true;
-
-function showTransactionPage() {
-    highlightNavigationBar("transactions");
-    showTransactionNavigation();
-    showPurchaseWithTyroUI();
-}
-
-
-
 function showConfigurationPage() {
     highlightNavigationBar("configuration");
+    showConfigNavigation();
     showPairing();
 }
 
-function showTransactionNavigation() {
-    $("#navigation").html($("#transactionsNavigation").html());
+function showConfigNavigation() {
+    $("#navigation").html($("#configNavigation").html());
 }
 
 
@@ -209,7 +201,7 @@ function formatResult(response) {
         <p>&copy; Tyro Payments 2015</p>
     </footer>
 </div>
-<ul id="transactionsNavigation" class="hidden">
+<ul id="configNavigation" class="hidden">
     <li id="configuration"><a href="javascript:showConfigurationPage()">Configuration</a></li>
     <li id="purchaseWithTyroUI"><a href="javascript:showPurchaseWithTyroUI()">Purchase</a></li>
     <li id="refundWithTyroUI"><a href="javascript:showRefundWithTyroUI()">Refund</a></li>
