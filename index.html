@@ -108,6 +108,10 @@ function highlightNavigation(selected) {
 
 $().ready(function () {
     showTransactionPage();
+    setTimeout(()=>{
+        $("#mid").val(329);
+         $("#tid").val(100);
+    },3000);
 });
 
 function doPurchaseWithTyroUI() {
